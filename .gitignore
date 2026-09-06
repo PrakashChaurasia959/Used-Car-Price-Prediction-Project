@@ -1,0 +1,54 @@
+# ── Python ──────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+dist/
+build/
+
+# Virtual environment
+.venv/
+venv/
+env/
+ENV/
+
+# Secrets – never commit
+.env
+*.env
+.env.*
+
+# ML model binaries (large binary files)
+backend/ml/model/*.pkl
+
+# Uploads
+backend/uploads/
+
+# ── Node ─────────────────────────────────────────────────────
+node_modules/
+frontend/node_modules/
+frontend-new/node_modules/
+
+# Build output
+frontend/dist/
+frontend-new/dist/
+
+# ── IDE / OS ─────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Testing ──────────────────────────────────────────────────
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+
+# ── Logs ─────────────────────────────────────────────────────
+*.log
+logs/
