@@ -1,4 +1,6 @@
-const BASE = "http://localhost:8000";
+// In development, Vite proxies /auth and /predict to http://localhost:8000
+// This means we never need to hardcode the backend host — it always works.
+const BASE = "";
 
 function authHeaders() {
   const token = localStorage.getItem("token");
