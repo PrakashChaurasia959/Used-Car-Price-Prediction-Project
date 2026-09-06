@@ -47,15 +47,29 @@ export default function Dashboard() {
       <Navbar />
 
       <main className="page-body">
-        {/* Welcome bar */}
-        <div className="welcome-bar">
-          <div>
+        {/* Welcome bar with hero image */}
+        <div className="welcome-bar" style={{ overflow: "hidden", minHeight: 130 }}>
+          <div style={{ zIndex: 1 }}>
             <h1>Hello, {firstName} 👋</h1>
             <p>Smart Used Car Valuation Powered by Machine Learning</p>
+            <Link to="/predict" className="btn btn-lg" style={{ marginTop: 16, background: "rgba(255,255,255,0.18)", color: "#fff", border: "1px solid rgba(255,255,255,0.3)", display: "inline-flex" }}>
+              New Prediction <IconArrow size={16} />
+            </Link>
           </div>
-          <Link to="/predict" className="btn btn-lg" style={{ background: "rgba(255,255,255,0.15)", color: "#fff", border: "1px solid rgba(255,255,255,0.25)", flexShrink: 0 }}>
-            New Prediction <IconArrow size={16} />
-          </Link>
+          <img
+            src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=500&q=70&auto=format&fit=crop&crop=right"
+            alt="Luxury car"
+            style={{
+              position: "absolute", right: 0, top: 0, bottom: 0,
+              height: "100%", width: "340px",
+              objectFit: "cover", objectPosition: "center",
+              opacity: 0.22, maskImage: "linear-gradient(to right, transparent 0%, black 40%)",
+              WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 40%)",
+              pointerEvents: "none",
+            }}
+            loading="lazy"
+            onError={e => { e.target.style.display = "none"; }}
+          />
         </div>
 
         {/* Stats cards */}
